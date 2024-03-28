@@ -58,11 +58,11 @@ const MisServicios = () => {
   };
 
   const columns = [
-    // { field: 'usuario_id', headerName: 'Usuario ID', width: 150 },
-    { field: 'servicio', headerName: 'Servicio', width: 100 },
-    { field: 'tracto', headerName: 'Tracto', width: 100 },
-    { field: 'rampla', headerName: 'Rampla', width: 100 },
     { field: 'fecha_contable_nv', headerName: 'Fecha Contable NV', width: 150 },
+    { field: 'destino', headerName: 'Destino', width: 100 },
+    { field: 'patente_tracto', headerName: 'Tracto', width: 100 },
+    { field: 'patente_rampla', headerName: 'Rampla', width: 100 }, 
+    { field: 'servicio', headerName: 'Servicio', width: 100 },
     { field: 'estado_de_servicio', headerName: 'Estado de Servicio', width: 150 },
     { field: 'documentacion_viaje', headerName: 'Documentación Viaje', width: 150 },
     { field: 'valor_servicio', headerName: 'Valor Servicio', width: 150 },
@@ -122,8 +122,8 @@ const MisServicios = () => {
               {selectedRowData && (
                 <>
                   <p>Servicio: { selectedRowData.servicio }</p>
-                  <p>Tracto: { selectedRowData.tracto }</p>
-                  <p>Rampla: { selectedRowData.rampla }</p>
+                  <p>Patente: { selectedRowData.patente_tracto }</p>
+                  
                   <div style={{ marginTop: '20px' }} />
                   {/* Área de texto para escribir comentarios */}
                   <TextField
